@@ -1,0 +1,54 @@
+body {
+  background-color: #17242d;
+
+  color: #ffffff;
+  font-family: Verdana, sans-serif;
+}
+
+form {
+  padding: 15px 0 10px;
+}
+
+input,
+button {
+  padding: 8px;
+  color: #ffffff;
+  border: solid 1px #5d666c;
+  border-radius: 4px;
+}
+
+input {
+  background-color: #17242d;
+}
+
+input:hover {
+  border-color: #91979a;
+}
+
+input::placeholder {
+  color: #5d666c;
+}
+
+button {
+  background-color: #4f5e65;
+
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: #6b787e;
+}
+
+.set-button {
+  width: 40px;
+}
+
+.main-button {
+  color: #17242d;
+  background-color: #80f5d2;
+}
+
+.main-button:hover {
+  background-color: #94f7d9;
+}
