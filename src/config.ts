@@ -23,6 +23,7 @@ export type Config = {
 export type MembershipLevelName = 'Narys' | 'Žalvarinis Narys';
 export type Currency = 'EUR' | 'GBP' | 'USD';
 // 'AUD' | 'BRL' | 'CAD' | 'CZK' | 'DKK' | 'EUR' | 'HKD' | 'ILS' | 'MYR' | 'MXN' | 'NOK' | 'NZD' | 'PHP' | 'PLN' | 'GBP' | 'RUB' | 'SGD' | 'SEK' | 'CHF' | 'THB' | 'TRY' | 'USD'
+// currency codes: https://dev.streamlabs.com/docs/currency-codes
 
 export const config: Config = {
   token: 'TOKEN_HERE',
