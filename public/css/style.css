@@ -5,6 +5,12 @@ body {
   font-family: Verdana, sans-serif;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: 110px auto;
+  align-items: center;
+}
+
 form {
   padding: 15px 0 10px;
 }

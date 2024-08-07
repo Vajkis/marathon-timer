@@ -9,27 +9,31 @@
   <body>
     <h1>Manual Timer Management</h1>
 
-    <span>Set value:</span>
+    <div class="grid">
+      <span>Set value:</span>
 
-    <button class="set-button" onclick="setInputValue(5)">5</button>
-    <button class="set-button" onclick="setInputValue(10)">10</button>
-    <button class="set-button" onclick="setInputValue(30)">30</button>
-    <button class="set-button" onclick="setInputValue(60)">60</button>
+      <div>
+        <button class="set-button" onclick="setInputValue(5)">5</button>
+        <button class="set-button" onclick="setInputValue(10)">10</button>
+        <button class="set-button" onclick="setInputValue(30)">30</button>
+        <button class="set-button" onclick="setInputValue(60)">60</button>
+      </div>
 
-    <form id="form">
       <label for="input">Enter Value:</label>
-      <input type="number" id="input" name="amount" placeholder="Amount" />
-      <button class="main-button" type="button" onclick="handleSubmit('add')">
-        Add
-      </button>
-      <button
-        class="main-button"
-        type="button"
-        onclick="handleSubmit('remove')"
-      >
-        Remove
-      </button>
-    </form>
+      <form id="form">
+        <input type="number" id="input" name="amount" placeholder="Amount" />
+        <button class="main-button" type="button" onclick="handleSubmit('add')">
+          Add
+        </button>
+        <button
+          class="main-button"
+          type="button"
+          onclick="handleSubmit('remove')"
+        >
+          Remove
+        </button>
+      </form>
+    </div>
 
     <div id="message"></div>
 
