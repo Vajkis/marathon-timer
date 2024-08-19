@@ -1,3 +1,17 @@
+// YouTube membership names must be added at:
+//   type Config.amount.membershipLevelName
+//   type MembershipLevelName
+//   const Config.amount.membershipLevelName
+// also remove examples
+
+// edit currency in similar way, add or remove at:
+//   type Config.currency
+//   type Currency
+//   const Config.currency
+// this is multiplier for donated amaunt, that will be converted in a minutes
+// also others currencies donates ends up 0 minutes for donate
+// currency codes: https://dev.streamlabs.com/docs/currency-codes
+
 export type Config = {
   token: string;
   amount: {
@@ -5,8 +19,8 @@ export type Config = {
     donation: number;
     superchat: number;
     membershipLevelName: {
-      Narys: number;
-      'Žalvarinis Narys': number;
+      Member: number;
+      'Examples Tier 2': number;
     };
   };
   currency: {
@@ -20,9 +34,8 @@ export type Config = {
   };
 };
 
-export type MembershipLevelName = 'Narys' | 'Žalvarinis Narys';
+export type MembershipLevelName = 'Member' | 'Examples Tier 2';
 export type Currency = 'EUR' | 'GBP' | 'USD';
-// currency codes: https://dev.streamlabs.com/docs/currency-codes
 
 export const config: Config = {
   token: 'TOKEN_HERE',
@@ -31,8 +44,8 @@ export const config: Config = {
     donation: 3,
     superchat: 2,
     membershipLevelName: {
-      Narys: 6,
-      'Žalvarinis Narys': 24
+      Member: 6,
+      'Examples Tier 2': 24
     }
   },
   currency: {
