@@ -3,14 +3,14 @@ import fs from 'fs';
 import { Event } from './manageDonations';
 import { config } from './config';
 
-let timer: NodeJS.Timeout | undefined;
+let timer!: NodeJS.Timeout;
 let rawTime = 0;
 
 export function startTimer(amount: number): void {
   rawTime = amount;
   timer = setInterval(() => {
     if (rawTime-- <= 0) {
-      timer = undefined;
+      clearInterval(timer);
       return;
     }
 
