@@ -14,3 +14,7 @@ manual add or remove time at http://localhost:3000
     Youtube superchat
     Youtube member
     Youtube member gift
+
+### Supported Languages:
+
+    Lithuanian

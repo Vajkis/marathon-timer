@@ -1,3 +1,6 @@
+// set unique token at:
+//   const config.token
+
 // YouTube membership names must be added at:
 //   type Config.amount.membershipLevelName
 //   type MembershipLevelName
