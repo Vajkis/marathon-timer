@@ -1,4 +1,4 @@
-import { config, Currency, MembershipLevelName } from './config';
+import { config } from './config';
 import { Action, updateTimer } from './timer';
 
 export type Event<T> = {
@@ -13,22 +13,22 @@ interface Message {
 }
 
 interface Subscription extends Message {
-  membershipLevelName: MembershipLevelName;
+  membershipLevelName: string;
   months: number;
 }
 
 interface MembershipGift extends Message {
   giftMembershipsCount: number;
-  giftMembershipsLevelName: MembershipLevelName;
+  giftMembershipsLevelName: string;
 }
 
 interface Superchat extends Message {
-  currency: Currency;
+  currency: string;
   displayString: string;
 }
 
 interface Donation extends Message {
-  currency: Currency;
+  currency: string;
   formattedAmount: string;
 }
 
@@ -80,7 +80,7 @@ function manageDonation(event: Event<Donation>): void {
   updateTimer(value * multiplier, 'add', event);
 }
 
-function getValue(currency: Currency, displayString: string) {
+function getValue(currency: string, displayString: string) {
   const numericString = displayString.replace(/[^0-9.,]/g, '');
   const normalizedString = numericString.replace(',', '.');
   const value = Number(normalizedString);
