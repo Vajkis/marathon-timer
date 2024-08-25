@@ -1,24 +1,32 @@
 import { Config } from './types/config';
 
 export const config: Config = {
-  // set unique token
+  // set unique Streamlabs socket API token
   token: 'TOKEN_HERE',
-  // set multiplier for your preference
+  // set multiplier in seconds for your preference
   amount: {
-    manual: 1,
-    donation: 3,
-    superchat: 2,
+    manual: 60,
+    bits: 1,
+    donation: 60,
+    superchat: 40,
+    twitchCharity: 0,
     // YouTube membership names must be added
-    // set number of minutes per member tier
+    // set number of seconds per YouTube member tier
     // also remove examples
     membershipLevelName: {
-      Member: 6,
-      'Examples Tier 2': 24
+      Member: 5 * 60,
+      'Example Tier 2': 10 * 60
+    },
+    // set number of seconds per Twitch subscribtion tier
+    twitchTier: {
+      1: 5 * 60,
+      2: 10 * 60,
+      3: 15 * 60
     }
   },
   // edit currency in similar way, add or remove
-  // this is multiplier for donated amaunt, that will be converted in a minutes
-  // also others currencies donates ends up 0 minutes for donate
+  // this is multiplier for donated amount
+  // also others currencies donates ends up 0 seconds for donate
   // currency codes: https://dev.streamlabs.com/docs/currency-codes
   currency: {
     EUR: 1,

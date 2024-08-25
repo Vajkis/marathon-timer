@@ -1,12 +1,14 @@
-install node.js if don't have: https://nodejs.org/dist/v20.16.0/node-v20.16.0-x64.msi
+# Marathon Timer with Streamlabs
 
-to download packages run: **npm i**
+- install node.js if don't have: https://nodejs.org/dist/v20.16.0/node-v20.16.0-x64.msi
 
-update **src/config.ts** by your preference
+- to download packages run: **npm i**
 
-to start app run: **npm run dev**
+- update **src/config.ts** by your preference
 
-manual add or remove time at http://localhost:3000
+- to start app run: **npm run dev**
+
+- manual add or remove time at http://localhost:3000
 
 ### Supported Donate Types:
 
@@ -14,6 +16,9 @@ manual add or remove time at http://localhost:3000
     YouTube member
     YouTube member gift
     Streamlabs donate
+    Twitch bits
+    Twitch charity donation
+    Twitch subscription
 
 ### Supported Timer Types:
 

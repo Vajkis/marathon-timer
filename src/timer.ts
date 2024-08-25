@@ -44,12 +44,10 @@ export function startTimer(amount: number): void {
 export type Action = 'add' | 'remove';
 
 export function updateTimer(
-  minutes: number,
+  seconds: number,
   action: Action,
   event?: Event<any>
 ): void {
-  const seconds = minutes * 60;
-
   const repeat = event?.message[0]?.repeat;
   const isPreview = event?.message[0]?.isPreview;
   const isTest = event?.message[0]?.isTest;
@@ -70,7 +68,7 @@ export function updateTimer(
 
   let timerUpdateLog = `[${currentTime}] type: ${
     event?.type || 'manual'
-  } | minutes: ${minutes}`;
+  } | minutes: ${seconds % 60 ? `~${Math.round(seconds / 60)}` : seconds / 60}`;
 
   if (repeat) timerUpdateLog += ' | repeat: true';
   if (isPreview) timerUpdateLog += ' | isPreview: true';
