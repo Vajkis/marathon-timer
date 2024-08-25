@@ -1,8 +1,8 @@
 import path from 'path';
 import fs from 'fs';
-import { Event } from './manageDonations';
 import { config } from './config';
 import { formatTimer } from './formatTimer';
+import { Event } from './types/event';
 
 let timer!: NodeJS.Timeout;
 let rawTime = 0;

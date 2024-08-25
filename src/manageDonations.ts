@@ -1,10 +1,6 @@
 import { config } from './config';
 import { Action, updateTimer } from './timer';
-
-export type Event<T> = {
-  type: string;
-  message: Array<T>;
-};
+import { Event } from './types/event';
 
 interface Message {
   isPreview?: boolean;
