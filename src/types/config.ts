@@ -1,3 +1,5 @@
+import { TimerType } from './timerType';
+
 export type Config = {
   token: string;
   amount: {
@@ -15,4 +17,5 @@ export type Config = {
     donations: boolean;
     timerUpdate: boolean;
   };
+  timerType: TimerType;
 };

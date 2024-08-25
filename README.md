@@ -10,11 +10,13 @@ manual add or remove time at http://localhost:3000
 
 ### Supported Donate Types:
 
+    YouTube superchat
+    YouTube member
+    YouTube member gift
     Streamlabs donate
-    Youtube superchat
-    Youtube member
-    Youtube member gift
 
-### Supported Languages:
+### Supported Timer Types:
 
+    English
     Lithuanian
+    hh:mm:ss

@@ -2,6 +2,7 @@ import path from 'path';
 import fs from 'fs';
 import { Event } from './manageDonations';
 import { config } from './config';
+import { formatTimer } from './formatTimer';
 
 let timer!: NodeJS.Timeout;
 let rawTime = 0;
@@ -38,30 +39,6 @@ export function startTimer(amount: number): void {
       }
     );
   }, 1000);
-}
-
-function formatTimer(amount: number): string {
-  let timerText = '';
-
-  const hours = Math.floor(amount / 3600);
-  const minutes = Math.floor((amount % 3600) / 60);
-  const seconds = amount % 60;
-
-  const hoursText = `${hours} valand${
-    hours % 10 === 1 ? 'a' : hours % 10 === 0 ? 'ų' : 'os'
-  } `;
-  const minutesText = `${minutes} minu${
-    minutes % 10 === 1 ? 'tė' : minutes % 10 === 0 ? 'čių' : 'tės'
-  } `;
-  const hourText = `${seconds} sekund${
-    seconds % 10 === 1 ? 'ė' : seconds % 10 === 0 ? 'žių' : 'ės'
-  }`;
-
-  if (hours) timerText += hoursText;
-  if (hours || minutes) timerText += minutesText;
-  timerText += hourText;
-
-  return timerText;
 }
 
 export type Action = 'add' | 'remove';

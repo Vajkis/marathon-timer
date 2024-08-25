@@ -31,5 +31,7 @@ export const config: Config = {
   log: {
     donations: true,
     timerUpdate: true
-  }
+  },
+  // possible types: en | lt | hh:mm:ss
+  timerType: 'hh:mm:ss'
 };
