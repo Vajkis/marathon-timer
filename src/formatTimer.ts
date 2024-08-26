@@ -31,7 +31,9 @@ export function formatTimer(amount: number): string {
       break;
     case 'hh:mm:ss':
     default:
-      timerText = `${hours}:${minutes}:${seconds}`;
+      timerText = `${hours < 10 ? '0' : ''}${hours}:${
+        minutes < 10 ? '0' : ''
+      }${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
   }
 
   if (hours) timerText += hoursText;
