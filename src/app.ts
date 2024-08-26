@@ -4,6 +4,7 @@ import path from 'path';
 import fs from 'fs';
 import { connectToStreamlabs } from './connectToStreamlabs';
 import { startTimer } from './timer';
+import { config } from './config';
 
 const app = express();
 const port = 3000;
@@ -32,7 +33,7 @@ app.listen(port, () => {
         return;
       }
       const rawTime = Number(data);
-      startTimer(rawTime);
+      startTimer(rawTime || config.timerInit);
     }
   );
 });

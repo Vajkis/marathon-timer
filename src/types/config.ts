@@ -2,6 +2,7 @@ import { TimerType } from './timerType';
 
 export type Config = {
   token: string;
+  timerInit: number;
   amount: {
     manual: number;
     bits: number;

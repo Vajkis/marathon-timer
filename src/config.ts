@@ -3,6 +3,10 @@ import { Config } from './types/config';
 export const config: Config = {
   // set unique Streamlabs socket API token
   token: 'TOKEN_HERE',
+  // set default amount for timer
+  // this amount will set at first then raw time is equal to 0
+  // also can change it in data.rawTime.txt file
+  timerInit: 60 * 60,
   // set multiplier in seconds for your preference
   amount: {
     manual: 60,
