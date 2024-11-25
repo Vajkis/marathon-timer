@@ -11,7 +11,7 @@ export const config: Config = {
 
   // set amount for donation don't add time
   // always can add manual if needed
-  timerLock: 60 * 10,
+  timerLock: 0,
 
   // set minimum donation amount for timer to update
   minAmount: {
