@@ -5,7 +5,7 @@ import { formatTimer } from './formatTimer';
 import { Event } from './types/event';
 
 let timer!: NodeJS.Timeout;
-let rawTime = 0;
+export let rawTime = 0;
 
 export function startTimer(amount: number): void {
   rawTime = amount;

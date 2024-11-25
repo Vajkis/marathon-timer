@@ -1,5 +1,5 @@
 import { config } from './config';
-import { Action, updateTimer } from './timer';
+import { Action, rawTime, updateTimer } from './timer';
 import { Event } from './types/event';
 
 interface Message {
@@ -48,6 +48,8 @@ export function updateManual(amount: number, action: Action): void {
 }
 
 export function manageDonations(event: Event<any>): void {
+  if (rawTime < config.timerLock) return;
+
   switch (event.type) {
     case 'bits':
       manageTwitchBits(event);

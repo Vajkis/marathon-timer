@@ -3,6 +3,7 @@ import { TimerType } from './timerType';
 export type Config = {
   token: string;
   timerInit: number;
+  timerLock: number;
   minAmount: {
     bits: number;
     donation: number;

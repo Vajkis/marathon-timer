@@ -1,7 +1,6 @@
 import { io } from 'socket.io-client';
 import { manageDonations } from './manageDonations';
 import { config } from './config';
-import { updateTimer } from './timer';
 
 export function connectToStreamlabs() {
   const streamlabs = io(

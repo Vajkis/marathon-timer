@@ -3,10 +3,16 @@ import { Config } from './types/config';
 export const config: Config = {
   // set unique Streamlabs socket API token
   token: 'TOKEN_HERE',
+
   // set default amount for timer
   // this amount will set at first then raw time is equal to 0
   // also can change it in data.rawTime.txt file
   timerInit: 60 * 60,
+
+  // set amount for donation don't add time
+  // always can add manual if needed
+  timerLock: 60 * 10,
+
   // set minimum donation amount for timer to update
   minAmount: {
     bits: 100,
@@ -21,6 +27,7 @@ export const config: Config = {
     donation: 60,
     superchat: 40,
     twitchCharity: 0,
+
     // YouTube membership names must be added
     // set number of seconds per YouTube member tier
     // also remove examples
