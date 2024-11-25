@@ -3,7 +3,13 @@ import { TimerType } from './timerType';
 export type Config = {
   token: string;
   timerInit: number;
-  amount: {
+  minAmount: {
+    bits: number;
+    donation: number;
+    superchat: number;
+    twitchCharity: number;
+  };
+  amountMultiplier: {
     manual: number;
     bits: number;
     donation: number;

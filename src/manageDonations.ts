@@ -42,7 +42,7 @@ interface TwitchSubscription extends Message {
 }
 
 export function updateManual(amount: number, action: Action): void {
-  const multiplier = config.amount.manual;
+  const multiplier = config.amountMultiplier.manual;
 
   updateTimer(amount * multiplier, action);
 }
@@ -75,7 +75,8 @@ export function manageDonations(event: Event<any>): void {
 function manageYoutubeMembership(event: Event<YoutubeMembership>): void {
   const { membershipLevelName, months } = event.message[0];
 
-  const multiplier = config.amount.membershipLevelName[membershipLevelName];
+  const multiplier =
+    config.amountMultiplier.membershipLevelName[membershipLevelName];
 
   if (multiplier) updateTimer(months * multiplier, 'add', event);
   else updateTimer(0, 'add', event);
@@ -87,7 +88,7 @@ function manageYoutubeMembershipGift(
   const { giftMembershipsCount, giftMembershipsLevelName } = event.message[0];
 
   const multiplier =
-    config.amount.membershipLevelName[giftMembershipsLevelName];
+    config.amountMultiplier.membershipLevelName[giftMembershipsLevelName];
 
   if (multiplier) updateTimer(giftMembershipsCount * multiplier, 'add', event);
   else updateTimer(0, 'add', event);
@@ -96,25 +97,28 @@ function manageYoutubeMembershipGift(
 function manageYoutubeSuperChat(event: Event<YoutubeSuperchat>): void {
   const { currency, displayString } = event.message[0];
 
-  const multiplier = config.amount.superchat;
+  const multiplier = config.amountMultiplier.superchat;
   const value = getValue(currency, displayString);
 
+  if (value < config.minAmount.superchat) return;
   updateTimer(Math.floor(value * multiplier), 'add', event);
 }
 
 function manageStreamlabsDonation(event: Event<StreamlabsDonation>): void {
   const { currency, formattedAmount } = event.message[0];
 
-  const multiplier = config.amount.donation;
+  const multiplier = config.amountMultiplier.donation;
   const value = getValue(currency, formattedAmount);
 
+  if (value < config.minAmount.donation) return;
   updateTimer(Math.floor(value * multiplier), 'add', event);
 }
 
 function manageTwitchBits(event: Event<TwitchBits>): void {
   const { amount } = event.message[0];
-  const multiplier = config.amount.bits;
+  const multiplier = config.amountMultiplier.bits;
 
+  if (amount < config.minAmount.bits) return;
   updateTimer(Math.floor(amount * multiplier), 'add', event);
 }
 
@@ -123,9 +127,10 @@ function manageTwitchCharityDonation(
 ): void {
   const { currency, formattedAmount } = event.message[0];
 
-  const multiplier = config.amount.twitchCharity;
+  const multiplier = config.amountMultiplier.twitchCharity;
   const value = getValue(currency, formattedAmount);
 
+  if (value < config.minAmount.twitchCharity) return;
   updateTimer(Math.floor(value * multiplier), 'add', event);
 }
 
@@ -134,13 +139,13 @@ function manageTwitchSubscribtion(event: Event<TwitchSubscription>): void {
 
   switch (sub_plan) {
     case '1000':
-      updateTimer(config.amount.twitchTier[1], 'add', event);
+      updateTimer(config.amountMultiplier.twitchTier[1], 'add', event);
       break;
     case '2000':
-      updateTimer(config.amount.twitchTier[2], 'add', event);
+      updateTimer(config.amountMultiplier.twitchTier[2], 'add', event);
       break;
     case '3000':
-      updateTimer(config.amount.twitchTier[3], 'add', event);
+      updateTimer(config.amountMultiplier.twitchTier[3], 'add', event);
       break;
     default:
   }

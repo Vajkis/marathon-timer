@@ -7,8 +7,15 @@ export const config: Config = {
   // this amount will set at first then raw time is equal to 0
   // also can change it in data.rawTime.txt file
   timerInit: 60 * 60,
+  // set minimum donation amount for timer to update
+  minAmount: {
+    bits: 100,
+    donation: 1,
+    superchat: 1.5,
+    twitchCharity: 1
+  },
   // set multiplier in seconds for your preference
-  amount: {
+  amountMultiplier: {
     manual: 60,
     bits: 1,
     donation: 60,
