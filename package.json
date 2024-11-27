@@ -7,8 +7,16 @@
     "dev": "nodemon",
     "build": "tsc"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "livestream",
+    "marathon",
+    "timer",
+    "streamlabs",
+    "donation",
+    "twitch",
+    "youtube"
+  ],
+  "author": "Vajkis",
   "license": "MIT",
   "description": "The Marathon Timer is a versatile timer application designed for use during online streams, supporting various donation types and timer formats. It integrates with Streamlabs API to display live timer.",
   "dependencies": {
