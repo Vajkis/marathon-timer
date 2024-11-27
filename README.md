@@ -86,7 +86,7 @@ The timer value is stored and automatically updated in the `data/timer.txt` file
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](LICENSE).
 
 ## Donations
 
