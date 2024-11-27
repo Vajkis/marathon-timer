@@ -10,7 +10,7 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "description": "",
+  "description": "The Marathon Timer is a versatile timer application designed for use during online streams, supporting various donation types and timer formats. It integrates with Streamlabs API to display live timer.",
   "dependencies": {
     "@types/express": "^4.17.21",
     "@types/node": "^22.1.0",
