@@ -12,8 +12,8 @@ The Marathon Timer is a versatile timer application designed for use during onli
 
 1. **Download the Repository**
 
-   - Visit the [Marathon Timer GitHub Repository](https://github.com/Vajkis/marathon-timer/archive/refs/heads/master.zip).
-   - Extract the downloaded zip file to your desired location.
+   - Visit the [Marathon Timer Release Page](https://github.com/Vajkis/marathon-timer/releases/tag/1.0.0).
+   - Downloaded and extract zip file to your desired location.
 
 2. **Install Dependencies**
 
