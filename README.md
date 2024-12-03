@@ -90,7 +90,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Donations
 
-If you find the Marathon Timer useful and would like to support its development, consider donating via [PayPal](https://www.paypal.com/paypalme/Vajkis/). Your contributions help me continue improving the projects and maintaining its features.
+If you find the Marathon Timer useful and would like to support its development, consider donating via [PayPal](https://www.paypal.com/donate/?hosted_button_id=UT5NEX6JVGDBW). Your contributions help me continue improving the projects and maintaining its features.
 
 Thank you for your support!
 
