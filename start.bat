@@ -1,3 +1,2 @@
 @echo off
-npm install
-npx nodemon
+npm install && npx nodemon
