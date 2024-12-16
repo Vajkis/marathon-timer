@@ -15,34 +15,30 @@ The Marathon Timer is a versatile timer application designed for use during onli
    - Visit the [Marathon Timer Release Page](https://github.com/Vajkis/marathon-timer/releases/latest).
    - Downloaded and extract zip file to your desired location.
 
-2. **Install Dependencies**
-
-   - Open a **Command Prompt** (CMD) with the extracted folder path.
-   - To install all necessary packages, run: `npm i`
-
-3. **Configure the Timer**
+2. **Configure the Timer**
 
    - Open the `src/config.ts` file.
    - Customize the settings according to your preferences.
 
-4. **Start the Application**
+3. **Start the Application**
 
-   - To start the timer application, run: `npm run dev`
+   - Run `start.bat` file to automatically install dependencies (if needed) and start the application.
+   - If the application doesn't work, try running the `start.bat` file as an **Administrator**.
 
-5. **Accessing the Timer**
+4. **Accessing the Timer**
 
    - Once the application is running, you can manually add or remove time via a web browser at: [http://localhost:3000](http://localhost:3000).
 
-6. **Timer Files Updates**
+5. **Timer Files Updates**
 
    - The timer will update the `data/timer.txt` file in real-time with the current timer value.
    - You can manually edit `data/rawTime.txt` or let the app update it automatically during the stream.
 
-7. **Stopping the Timer**
+6. **Stopping the Timer**
 
    - To stop the timer, simply kill the console window running the application.
 
-8. **Log Files for Debugging**
+7. **Log Files for Debugging**
 
    - The application creates two log files for debugging purposes:
 
