@@ -154,9 +154,8 @@ function manageTwitchSubscribtion(event: Event<TwitchSubscription>): void {
 }
 
 function getValue(currency: string, displayString: string): number {
-  const numericString = displayString.replace(/[^0-9.,]/g, '');
-  const normalizedString = numericString.replace(',', '.');
-  const value = Number(normalizedString);
+  const numericString = displayString.replace(/[^0-9.]/g, '');
+  const value = Number(numericString);
 
   const multiplier = config.currency[currency];
 
