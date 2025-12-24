@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 import routes from './routes';
 import path from 'path';
 import fs from 'fs';
@@ -8,6 +9,8 @@ import { config } from './config';
 
 const app = express();
 const port = 3000;
+
+app.use(cors());
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
